@@ -13,21 +13,21 @@ int xgrid[N][N] = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
 
                   
 bool isPresentInCol(int col, int num)
-{ // check whether num is present in col or not
+{ 
     for (int row = 0; row < N; row++)
         if (xgrid[row][col] == num)
             return true;
     return false;
 }
 bool isPresentInRow(int row, int num)
-{ // check whether num is present in row or not
+{
     for (int col = 0; col < N; col++)
         if (xgrid[row][col] == num)
             return true;
     return false;
 }
 bool isPresentInBox(int boxStartRow, int boxStartCol, int num)
-{ // check whether num is present in 3x3 box or not
+{ 
     for (int row = 0; row < 3; row++)
         for (int col = 0; col < 3; col++)
             if (xgrid[row + boxStartRow][col + boxStartCol] == num)
@@ -35,7 +35,7 @@ bool isPresentInBox(int boxStartRow, int boxStartCol, int num)
     return false;
 }
 void sudokuGrid()
-{ // print the sudoku grid after solve
+{ 
     for (int row = 0; row < N; row++)
     {
         for (int col = 0; col < N; col++)
